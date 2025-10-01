@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GNews — Search</title>
+  <link rel="stylesheet" href="post.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="logo">🌍 SNews <b>BY SURAJ GUPTA</b></div>
+    <nav class="navlinks">
+      <input id="searchInput" type="text" placeholder="Search news..." />
+      <!-- <button id="searchBtn">Search</button> -->
+      <button id="addNewsBtn">➕ Add News</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="wrap">
+    <section class="hero">
+      <h1>Ultra-fast News search</h1>
+      <p>Type a topic (e.g. <em>technology</em>, <em>india</em>, <em>cricket</em>) and press Enter or click Search.</p>
+    </section>
+
+    <!-- Search Controls -->
+    <section class="card">
+      <div class="controls" style="margin-bottom:8px">
+        <input id="query" type="text" placeholder="Search news (e.g. technology)" />
+        <button id="searchBtn" class="btn-primary">Search</button>
+        <button id="refreshBtn" class="btn-ghost">Refresh</button>
+      </div>
+
+      <!-- Error + Loading -->
+      <div id="error" class="error" style="display:none"></div>
+      <div id="loading" class="loading" style="display:none">Loading news…</div>
+
+      <!-- News Articles -->
+      <div id="articles" class="articles"></div>
+    </section>
+  </main>
+  <!-- Popup Saved News Section (hidden by default) -->
+  <aside id="savedNewsBox" class="notes-box card">
+    <h2>📝 Saved News</h2>
+    <div class="controls">
+      <input id="noteInput" type="text" placeholder="Write or save something..." />
+      <button id="addNoteBtn" class="btn-primary">Add</button>
+      <button id="closeNotesBtn" class="btn-secondary">Close</button>
+    </div>
+    <div id="notes" class="notes"></div>
+  </aside>
+
+<!-- Chat Bubble Button -->
+<button id="chatbot-btn">💬</button>
+
+<!-- Chat Window -->
+<div id="chatbot-window">
+  <div id="chat-header">News Assistant</div>
+  <div id="chat-messages"></div>
+  <div id="chat-input">
+    <input type="text" id="user-input" placeholder="Type a message...">
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>By Suraj Gupta</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
